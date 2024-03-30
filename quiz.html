@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo-Classes and Pseudo-Elements Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 100%;
+      margin: 0;
+      background-color:aliceblue;
+      margin: 10px;
+    }
+    p {
+      color:darkcyan;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h2>CSS Pseudo-Classes and Pseudo-Elements Quiz</h2>
+  <form id="quiz-form" >
+  
+    <!-- Question 1 -->
+    <div class="question">
+      <p>1. Which pseudo-class is used to style an element when it is hovered over by a mouse cursor?</p>
+      <label><input type="radio" name="q1" value="A"> A) :active</label>
+      <br>
+      <label><input type="radio" name="q1" value="B"> B) :focus</label>
+      <br>
+      <label><input type="radio" name="q1" value="C"> C) :hover</label>
+      <br>
+      <label><input type="radio" name="q1" value="D"> D) :visited</label>
+      <br>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <p>2. How can you select and style the first letter of every &lt;p&gt; element?</p>
+      <label><input type="radio" name="q2" value="A"> A) p:first-letter { ... }</label>
+      <br>
+      <label><input type="radio" name="q2" value="B"> B) p::first-letter { ... }</label>
+      <br>
+      <label><input type="radio" name="q2" value="C"> C) p:first-child { ... }</label>
+      <br>
+      <label><input type="radio" name="q2" value="D"> D) p::first-child { ... }</label>
+      <br>
+    </div>
+    <!-- Question 3 -->
+    <div class="question">
+        <p>3. Which pseudo-element should be used to insert content before the content of an element?</p>
+        <label><input type="radio" name="q3" value="A"> A) :before</label>
+        <br>
+        <label><input type="radio" name="q3" value="B"> B) ::before</label>
+        <br>
+        <label><input type="radio" name="q3" value="C"> C) :after</label>
+        <br>
+        <label><input type="radio" name="q3" value="D"> D) ::after</label>
+        <br>
+      </div>
+      <!-- Question 4 -->
+    <div class="question">
+        <p>4. What does the :nth-child(2n) selector target</p>
+        <label><input type="radio" name="q4" value="A"> A) The second child of every parent</label>
+        <br>
+        <label><input type="radio" name="q4" value="B"> B) Every even child</label>
+        <br>
+        <label><input type="radio" name="q4" value="C"> C)  Every odd child</label>
+        <br>
+        <label><input type="radio" name="q4" value="D"> D) The second child every two elements</label>
+        <br>
+      </div>
+      <!-- Question 5 -->
+    <div class="question">
+        <p>5. You are tasked with creating a navigation bar where the currently active link is visually distinct from others. The HTML structure cannot be changed, and you must use CSS to achieve this. Which pseudo-class will ensure the active link is styled differently without JavaScript?</p>
+        <label><input type="radio" name="q5" value="A"> A) :active</label>
+        <br>
+        <label><input type="radio" name="q5" value="B"> B) :focus</label>
+        <br>
+        <label><input type="radio" name="q5" value="C"> C) :hover</label>
+        <br>
+        <label><input type="radio" name="q5" value="D"> D) :link</label>
+        <br>
+      </div>
+      <!-- Question 6 -->
+    <div class="question">
+        <p>6. Which of the following is NOT a correct way to apply styles to an element when it gains focus?</p>
+        <label><input type="radio" name="q6" value="A"> A) element:focus { ... }</label>
+        <br>
+        <label><input type="radio" name="q6" value="B"> B) element::focus { ... }</label>
+        <br>
+        <label><input type="radio" name="q6" value="C"> C) element > :focus { ... }</label>
+        <br>
+        <label><input type="radio" name="q6" value="D"> D) All are correct</label>
+        <br>
+      </div>
+      <!-- Question 7 -->
+    <div class="question">
+        <p>7. How would you apply a style to only the first paragraph inside a container?</p>
+        <label><input type="radio" name="q7" value="A"> A) container p:first-of-type { ... }</label>
+        <br>
+        <label><input type="radio" name="q7" value="B"> B) container p:first-child { ... }</label>
+        <br>
+        <label><input type="radio" name="q7" value="C"> C) container:first p { ... }</label>
+        <br>
+        <label><input type="radio" name="q7" value="D"> D) Both A and B could be correct depending on the HTML structure.</label>
+        <br>
+      </div>
+      <!-- Question 8 -->
+    <div class="question">
+        <p>8. To style a checkbox when it is checked, which pseudo-class would you use?</p>
+        <label><input type="radio" name="q8" value="A"> A) :checked</label>
+        <br>
+        <label><input type="radio" name="q8" value="B"> B) :select</label>
+        <br>
+        <label><input type="radio" name="q8" value="C"> C) :active</label>
+        <br>
+        <label><input type="radio" name="q8" value="D"> D) :enabled</label>
+        <br>
+      </div>
+      <!-- Question 9 -->
+    <div class="question">
+        <p>9. If you want to style the first line of text within a &lt;div&gt;, which pseudo-element do you use?</p>
+        <label><input type="radio" name="q9" value="A"> A) div:first-line { ... }</label>
+        <br>
+        <label><input type="radio" name="q9" value="B"> B) div::first-line { ... }</label>
+        <br>
+        <label><input type="radio" name="q9" value="C"> C) div:first-letter { ... }</label>
+        <br>
+        <label><input type="radio" name="q9" value="D"> D) div::first-letter { ... }</label>
+        <br>
+      </div>
+       <!-- Question 10 -->
+    <div class="question">
+        <p>10. Consider an HTML document with a list of items (&lt;ul&gt; with &lt;li&gt; children). You need to style every third item to have a different background color, but only if it is an even child of its parent &lt;ul&gt;. How would you accomplish this?</p>
+        <label><input type="radio" name="q10" value="A"> A) <code>ul li:nth-child(3n):nth-child(even) { background-color: #ccc; }</code></label>
+        <br>
+        <label><input type="radio" name="q10" value="B"> B) <code>ul li:nth-child(6n) { background-color: #ccc; }</code></label>
+        <br>
+        <label><input type="radio" name="q10" value="C"> C) <code>ul li:nth-child(even):nth-child(3n) { background-color: #ccc; }</code></label>
+        <br>
+        <label><input type="radio" name="q10" value="D"> D) <code>ul li:nth-of-type(3n):nth-of-type(even) { background-color: #ccc; }</code></label>
+        <br>
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </div>
+      
+    <!-- Add submit button -->
+    
+    <div id="result" style="display: none;"> 
+        <h2>Results</h2>
+        <p id="score"></p>
+        <div id="answers"></div>
+      </div>
+
+      <script>
+      function submitQuiz() {
+        let score = 0;
+        const questions = [
+            { question: 1, answer: "C", explanation: "The :hover pseudo-class is used to style an element when the mouse cursor hovers over it." },
+            { question: 2, answer: "B", explanation: "The ::first-letter pseudo-element allows you to select and style the first letter of an element." },
+            { question: 3, answer: "A", explanation: "The :before pseudo-element inserts content before the content of its parent element." },
+            { question: 4, answer: "B", explanation:"The :nth-child(2n) pseudo-class selects every even child element." },
+            { question: 5, answer: "D", explanation:"The :link pseudo-class applies styles to a link that has not been visited yet." },
+            { question: 6, answer: "A", explanation:"element:focus { ... } is the correct way to apply styles to an element when it gains focus." },
+            { question: 7, answer: "D", explanation:"Both A (:first-of-type) and B (:first-child) could be correct depending on the HTML structure. If the container has only one paragraph, either will work. However, if there are multiple paragraphs, :first-child will only select the first child of the container, not necessarily the first paragraph." },
+            { question: 8, answer: "A", explanation:"The :checked pseudo-class is used to style a checkbox when it is checked." },
+            { question: 9, answer: "B", explanation:"The ::first-line pseudo-element allows you to style the first line of text within an element." },
+            { question: 10, answer: "C", explanation:"The :nth-child(3n):nth-child(even) pseudo-class selects every element that is a multiple of 3 and also an even child of its parent element. This will target every third even-numbered list item." }
+      ];
+
+        const form = document.getElementById("quiz-form");
+        const answerElements = form.querySelectorAll("input[type='radio']:checked");
+      
+        for (let i = 0; i < answerElements.length; i++) {
+          const answer = answerElements[i].value;
+          if (answer === questions[i].answer) {
+            score++;
+          }
+        }
+      
+        const resultDiv = document.getElementById("result");
+        const scoreDisplay = document.getElementById("score");
+        const answerDisplay = document.getElementById("answers");
+      
+        scoreDisplay.textContent = `Your score is ${score} out of ${questions.length}`;
+        resultDiv.style.display = "block";
+
+        answerDisplay.innerHTML = "";
+        for (let i = 0; i < questions.length; i++) {
+            let explanationText = "";
+            if (questions[i].answer === answerElements[i].value) {
+                explanationText = "Correct!";
+            } else {
+                explanationText = `Incorrect. The correct answer is ${questions[i].answer}.`;
+            }
+        }
+    }
+          </script>
+  </form>
+
+</body>
+</html>
