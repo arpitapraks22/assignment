@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Results</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  #results {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  .incorrect {
+    color: #d9534f;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h1>Quiz Results</h1>
+
+<div id="results"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var urlParams = new URLSearchParams(window.location.search);
+  var score = parseInt(urlParams.get('score'));
+  var incorrectAnswers = urlParams.get('incorrect').split(",");
+
+  var resultsDiv = document.getElementById("results");
+  resultsDiv.innerHTML += "<p>Your score is: " + score + "</p>";
+  resultsDiv.innerHTML += "<p class='incorrect'>Incorrect Answers:</p>";
+  
+  // Provide explanations for incorrect answers
+  incorrectAnswers.forEach(function(question) {
+    switch(question) {
+      case "q1":
+        resultsDiv.innerHTML += "<p><span class='incorrect'>Question 1:</span> The CSS animations help you to create dynamic transitions and effects.</p>";
+        break;
+      case "q2":
+        resultsDiv.innerHTML += "<p><span class='incorrect'>Question 2:</span> The correct CSS property used to define keyframes for animations is 'animation-name'.</p>";
+        break;
+      case "q3":
+        resultsDiv.innerHTML += "<p><span class='incorrect'>Question 3:</span> The '@keyframes' rule defines the animation keyframes.</p>";
+        break;
+      case "q4":
+        resultsDiv.innerHTML += "<p><span class='incorrect'>Question 4:</span> The CSS property used to specify the duration of an animation is 'animation-duration'.</p>";
+        break;
+      case "q5":
+        resultsDiv.innerHTML += "<p><span class='incorrect'>Question 5:</span> The 'animation-timing-function' property controls the speed curve of the animation.</p>";
+        break;
+      case "q6":
+        resultsDiv.innerHTML += "<p><span class='incorrect'>Question 6:</span> The 'animation-iteration-count' property specifies how many times an animation should be played.</p>";
+        break;
+      case "q7":
+        resultsDiv.innerHTML += "<p><span class='incorrect'>Question 7:</span> The 'animation-fill-mode' property specifies the style for the element when animation is not playing.</p>";
+        break;
+      case "q8":
+        resultsDiv.innerHTML += "<p><span class='incorrect'>Question 8:</span> The 'animation-play-state' property is used to pause and resume the animation.</p>";
+        break;
+      case "q9":
+        resultsDiv.innerHTML += "<p><span class='incorrect'>Question 9:</span> The 'animation-direction' property controls the direction of the animation.</p>";
+        break;
+      case "q10":
+        resultsDiv.innerHTML += "<p><span class='incorrect'>Question 10:</span> The 'transform' property allows rotating an element continuously.</p>";
+        break;
+      // Add more cases for additional questions if needed
+      default:
+        resultsDiv.innerHTML += "<p>Explanation not provided for: " + question + "</p>";
+    }
+  });
+});
+</script>
+
+</body>
+</html>

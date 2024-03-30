@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-color:aliceblue;
+            margin: 10px;
+        }
+        .class{
+            position: relative;
+            padding: 10px;
+            bottom: 10px;
+            border: 1px solid black;
+            background-color:lavenderblush;
+            right: 0px;
+            height: 120px;
+            width: 200px;
+            
+        }
+        .element{
+            position: absolute;
+            top: 264px;
+            left:300px;
+            bottom: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color:lavenderblush;
+            right: 0px;
+            height: 120px;
+            width: 200px;
+
+        }
+        .code1{
+            background-color: beige;
+            padding: 10px;
+            margin: 10px;
+        }
+        .code2{
+            background-color: beige;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="definition">
+        <h1>Pseudo-class and Pseudo-elements</h1>
+        <h2>Definition</h2>
+        <p>A <b>pseudo-class</b> can be defined as a keyword which is combined to a selector that defines the special state of the selected elements.</p>
+        <p>Unlike the pseudo-classes, the <b>pseudo-elements</b> are used to style the specific part of an element, whereas the pseudo-classes are used to style the element.</p>
+        <hr>
+    </div>
+    <div class="syntax">
+        <h2>Syntax</h2>
+        <div class="class">
+        <h3>pseudo-class</h3>
+        <code>selector: pseudo-class{
+            property: value; }</code>
+        </div>
+        <div class="element">
+        <h3>pseudo-element</h3>
+        <code>selector:: pseudo-element{
+            property: value; }</code>
+        </div>
+        <p>pseudo-class contains a single colon(:) and pseudo-element contains double colon(::) This is the main difference in the syntax of both.</p>
+        <hr>
+    </div>
+    <div class="types">
+        <h2>Types</h2>
+        <p>Here are the most commonly used <b>pseudo-classes</b> :</p>
+        <table border="3" class="table1">
+            <thead>
+                <td><b>pseudo-class</b></td>
+                <td><b>Description</b></td>
+            </thead>
+            <tbody>
+            <tr>
+                <td>:hover</td>
+                <td>It adds special effects to an element when the user moves the mouse pointer over the element.
+                </td>
+            </tr>
+            <tr>
+                <td>:link</td>
+                <td>It adds style to the unvisited link</td>
+            </tr>
+            <tr>
+                <td>:active</td>
+                <td>It is used to add style to an active element</td>
+            </tr>
+            <tr>
+                <td>:visited</td>
+                <td>It adds style to a visited link</td>
+            </tr>
+            <tr>
+                <td>:focus</td>
+                <td>It selects the element which is focused by the user currently</td>
+            </tr>
+
+            </tbody> 
+        </table>
+        <p>Example:</p>
+        <code class="code1">
+            P:hover{  
+                color:#ff33f3;  
+                }  
+                h2:hover{  
+                color:blue;  
+                }  
+        </code>
+        <p>And the most commonly used <b>pseudo-elements</b> :</p>
+        <table border="3" class="table2">
+            <thead>
+                <td><b>pseudo-element</b></td>
+                <td><b>Description</b></td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>::first-letter</td>
+                    <td>It selects the first letter of the text</td>
+                </tr>
+                <tr>
+                    <td>::first-line</td>
+                    <td>It styles the first line of the text</td>
+                </tr>
+                <tr>
+                    <td>::before</td>
+                    <td>It is used to add something before the element's content</td>
+                </tr>
+                <tr>
+                    <td>::after</td>
+                    <td>It is used to add something after the element's content</td>
+                </tr>
+                <tr>
+                    <td>::selection</td>
+                    <td>It is used to select the area of an element that is selected by the user</td>
+                </tr>
+            </tbody>
+            </table>
+            <p>Example:</p>
+        <code class="code2"> 
+            h1::first-letter {   
+                font-family: Lucida Calligraphy; font-size: 3cm;  
+                color: red;  
+                text-shadow: 5px 8px 9px green;  
+            }  
+        </code>
+        <p></p>
+        <hr>
+        </div>
+        <div class="imp">
+            <h2>Importance</h2>
+            <p>A unique state of an element can be defined using <b>pseudo-classes</b>. Some salient points that highlight their significance are as follows:</p>
+            <p><b>1. The states of user interaction:</b>A better user experience and more intuitive and responsive web interfaces are made possible by pseudo-classes such as :hover, :active, :focus, and :visited, which allow styles to respond to user interactions.</p>
+            <p><b>2. Classes with Structures:</b>You can target elements according to how they relate to siblings or where they are in a parent by using elements like :first-child, :last-child, :nth-child(), and :not(). Lists, tables, and other repetitive material can be styled with this method, which eliminates the need to provide each element a unique class or ID.</p>
+            <p><b>3. Input Validation States:</b>Without using JavaScript, form usability can be improved and user behaviors can be guided by CSS pseudo-classes like :valid, :invalid, and :required that provide visual feedback on inputs.</p>
+            <p><b>4. Enhancements for Accessibility:</b>Developers can design styles that increase accessibility by utilizing pseudo-classes. For example, the :focus pseudo-class can assist users who rely on keyboard controls by increasing the visibility of keyboard navigation on a website.</p>
+            <p>You can style particular portions of an element, like the material that appears before or after it or the initial letter or line of text, by using <b>pseudo-elements.</b> Among their significance are:</p>
+            <p><b>1. Enhancement & Decoration of Content:</b>You can add material to an HTML document for aesthetic reasons or to provide visual signals without contaminating the HTML with non-semantic syntax by using the ::before and ::after attributes. Icons, ornamental quotes, and dynamic styling effects are common uses for this.</p>
+            <p><b>2. Text Styling:</b>::first-letter and ::first-line pseudo-elements enable you to apply styles to the first letter or line of a block of text, allowing for elegant typographic effects like drop caps or highlighting the beginning of an article.</p>
+            <p><b>3. Personalized Pickers:</b>You can customize how user-selected text looks with pseudo-elements like ::selection, which improves visual feedback and theme coherence.</p>
+            <hr>
+        </div>
+        <div class="example">
+            <h2>Real life examples</h2>
+            <p>There are many uses for pseudo-classes and pseudo-elements in practical web development situations. They are extremely useful tools because they can add interactivity, style dynamically based on user interaction or the structure of the document, and improve content without changing the HTML structure. Here are a few real-world examples that demonstrate how they can be applied successfully in various contexts:</p>
+            <h3 style="background-color:lightblue; width: 25%;">Styling Links and User Interaction:</h3>
+            <p><b>Link States (:link, :visited, :hover, :active, :focus):</b>These pseudo-classes are crucial for enhancing the usability of navigation. Depending on whether the link has been visited by the user or is being interacted with right now, they style it differently. For example, altering the color of links when they hover over or are active gives the user instant visual feedback.</p>
+            <h3 style="background-color:lightblue; width: 20%;">Form Inputs and Validation:</h3>
+            <p><b>Form Feedback (:valid, :invalid, :required, :optional, :</b>in-range, :out-of-range): Pseudo-classes can dynamically style form elements based on their validation state. For example, applying a red border to invalid inputs (:invalid) or highlighting required fields (:required) can guide users through form completion without any JavaScript.</p>
+            <h3 style="background-color: lightblue; width: 9%;">Text Effects:</h3>
+            <p><b>First Letter or Line Styling (::first-letter, ::first-line):</b>These pseudo-elements can create distinctive typographic effects, such as drop caps or setting the first line in bold or a different font, making the opening of articles or chapters stand out.</p>
+            <h3 style="background-color: lightblue; width: 21%;">User Selection Customization:</h3>
+            <p><b>Custom Selection Styles (::selection):</b>This pseudo-element changes the color of text and background when the user selects text, allowing the selection to match the site's theme or enhance readability.</p>
+            <h3 style="background-color: lightblue; width: 20%;">Accessibility Enhancements:</h3>
+            <p><b>Focus Styles (:focus):</b>Custom focus styles are crucial for accessibility, helping keyboard users navigate through interactive elements like links, buttons, and form fields. A distinct focus style ensures that these users can visually track their focus position on the page.</p>
+            
+
+        </div>
+</body>
+</html>
